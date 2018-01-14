@@ -15,11 +15,13 @@ import com.trizic.coding.dto.ErrorResp;
 @ControllerAdvice
 public class AdvisorControllerAdvice extends ResponseEntityExceptionHandler {
 
+	@Override
 	public ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers,
 			HttpStatus status, WebRequest request) {
 		return generateResponse("There is something wrong with the input.", HttpStatus.BAD_REQUEST);
 	}
 
+	@Override
 	public ResponseEntity<Object> handleHttpMediaTypeNotAcceptable(HttpMediaTypeNotAcceptableException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
 		return generateResponse("The media type is not support.", HttpStatus.BAD_REQUEST);
