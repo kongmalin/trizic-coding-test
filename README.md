@@ -33,6 +33,12 @@ http://localhost:8090/v1/advisor/e0fe83a1-7512-432f-ba66-d2ae677272c1/portfolio
 I decided to use H2 database since spring supports it out of the box and it can support in memory storage and disk storage.
 But I am using it as in memory story.
 
+After you start the project up and running, you can verify the data in H2 database by going to http://localhost:8090/h2-console
+- Driver class: org.h2.Driver
+- Url: jdbc:h2:mem:testdb
+- User: admin
+- Password: admin
+
 ## Model
 - Advisor oneToMany Portfolio
 - Portfolio oneToMany AsserAllocation
